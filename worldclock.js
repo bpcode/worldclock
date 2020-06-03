@@ -131,7 +131,7 @@ Module.register("worldclock",{
       gap = "UTC " + clock.format('Z')
     }
 
-    gapWrapper.innerHTML = gap
+    gapWrapper.innerHTML = "&nbsp;("+gap+")"
 
     captionWrapper.appendChild(gapWrapper)
 

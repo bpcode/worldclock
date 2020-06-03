@@ -55,13 +55,13 @@
   flex-direction: column-reverse;
   justify-content:center;
   align-items:stretch;
-  text-align:inherit;
+  text-align:left;
 }
 
 .worldclock .style-top .caption,
 .worldclock .style-top .main {
   display:block;
-  text-align:inherit;
+  text-align:left;
   vertical-align:top;
 }
 
@@ -74,7 +74,7 @@
 
 .worldclock .style-top .time::before,
 .worldclock .style-top .gap::before {
-  content: "  ";
+  content: " ";
 }
 
 /* style : bottom */
@@ -83,13 +83,13 @@
   flex-direction: column;
   justify-content:center;
   align-items:stretch;
-  text-align:inherit;
+  text-align:left;
 }
 
 .worldclock .style-bottom .caption,
 .worldclock .style-bottom .main {
   display:block;
-  text-align:inherit;
+  text-align:left;
   vertical-align:top;
 }
 
@@ -102,7 +102,7 @@
 
 .worldclock .style-bottom .time::before,
 .worldclock .style-bottom .gap::before {
-  content: "  ";
+  content: " ";
 }
 
 /* style : left */
@@ -112,7 +112,7 @@
   justify-content:flex-start;
   align-items:center;
   align-content:flex-start;
-  text-align:inherit;
+  text-align:left;
 }
 
 .worldclock .style-left .caption {
@@ -152,14 +152,14 @@
   flex-direction: row;
   justify-content:center;
   align-items:center;
-  text-align:inherit;
+  text-align:left;
 }
 
 .worldclock .style-right .caption {
-  display:flex;
+  /* display:flex;
   flex-direction: column;
-  align-items:flex-start;
-  margin-left:15px;
+  align-items:flex-start; */
+  margin-left:10px;
   flex-grow:1;
   width:30%;
 }
@@ -181,6 +181,7 @@
 .worldclock .style-right .main .flag {
   order:1;
   margin-right :10px;
+  text-align:left;
 }
 
 .worldclock .style-right .main .time {
