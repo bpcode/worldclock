@@ -161,7 +161,7 @@
   align-items:left;
   margin-left:0px;
   flex-grow:1;
-  width:30%;
+  /* width:30%; */
 }
 
 .worldclock .style-right .caption .zone,
@@ -169,6 +169,7 @@
   display:flex;
   text-align:left;
 }
+
 
 .worldclock .style-right .main {
   flex-grow:1;
@@ -186,4 +187,15 @@
 
 .worldclock .style-right .main .time {
   order:2;
+}
+
+.worldclock .style-right .caption {
+    color: #fff;
+    margin-left: -20px;
+    text-align: left;
+}
+.workclock .style-right .zone {
+    color: #666;
+    margin-left: -15px;
+    text-align: left;
 }
