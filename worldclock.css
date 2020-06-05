@@ -14,6 +14,8 @@
   color:#FFF;
 }
 
+
+
 .worldclock .flag {
   font-size:100%;
 }
@@ -198,4 +200,14 @@
     color: #666;
     margin-left: -15px;
     text-align: left;
+}
+
+.worldclock .night {
+  display:block;
+  height:100%;
+  color:MidnightBlue;
+}
+
+.worldclock .style-right .main .night {
+  order:2;
 }

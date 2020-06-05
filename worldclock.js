@@ -90,12 +90,21 @@ Module.register("worldclock",{
     }
 
     var timeString
-    timeString = clock.format(this.config.timeFormat)
+    timeString = clock.format(timeFormat)
 
     var timeWrapper = document.createElement("div")
-    timeWrapper.innerHTML = timeString
-    timeWrapper.className = "time"
-    //timeWrapper.className = "time bright medium"
+    timeWrapper.innerHTML = timeString;
+
+    var dayStart = moment.tz("07:00 AM", "hh:mm A", c.timezone);
+    var dayFinish = moment.tz("10:00 PM", "hh:mm A", c.timezone);
+
+    if (clock.isBetween(dayStart, dayFinish)) {
+        timeWrapper.className = "time"
+    }
+    else {
+        timeWrapper.className = "night"
+    }
+
 
     var captionWrapper = document.createElement("div")
     captionWrapper.className = "caption"
@@ -170,10 +179,8 @@ Module.register("worldclock",{
   // Override dom generator.
   getDom: function() {
     var wrapper = document.createElement("div")
-    wrapper.className
-      = "worldtime"
-        + ' style-' + this.config.style
-    var c
+    wrapper.className = "worldtime" + ' style-' + this.config.style
+    var c;
     for (c in this.config.clocks) {
       wrapper.appendChild(this.clockFormat(this.config.clocks[c], c))
     }
