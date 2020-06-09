@@ -95,10 +95,12 @@ Module.register("worldclock",{
     var timeWrapper = document.createElement("div")
     timeWrapper.innerHTML = timeString;
 
-    var dayStart = moment.tz("07:00 AM", "hh:mm A", c.timezone);
-    var dayFinish = moment.tz("10:00 PM", "hh:mm A", c.timezone);
+    var dayStart = moment("07:00 AM", "hh:mm A");
+    var dayFinish = moment("10:00 PM", "hh:mm A");
+    var currTime = moment(timeString, "hh:mm A");
+    
 
-    if (clock.isBetween(dayStart, dayFinish)) {
+    if (currTime.isBetween(dayStart, dayFinish)) {
         timeWrapper.className = "time"
     }
     else {
